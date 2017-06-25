@@ -1,0 +1,24 @@
+// ====================
+// * _svgIcon
+// ====================
+
+.m-svgIcon {
+   > svg {
+     height: 20px;
+     transition: fill .5s ease;
+   }
+   &__tw {
+     width: 25px;
+     fill: $color-twitter;
+     a:hover & {
+       fill: rgba($color-twitter, .5);
+     }
+   }
+   &__fb {
+     width: 11px;
+     fill: $color-facebook;
+     a:hover & {
+       fill: rgba($color-facebook, .5);
+     }
+   }
+}

@@ -1,0 +1,47 @@
+// ====================
+// * _footer
+// ====================
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 20px;
+  &__inner {
+    width: 100%;
+    max-width: $width-mid;
+    margin: 0 auto;
+  }
+}
+
+.footer__sns {
+  display: flex;
+  padding-bottom: 20px;
+  &-icon {
+    width: 20px;
+    height: 20px;
+    a {
+      display: block;
+    }
+    & + * {
+      margin-left: 20px;
+    }
+  }
+}
+
+.footer__copy {
+  font-size: 13px;
+  font-family: $font-family-mon;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+//= media query
+@media #{$mq800} {
+  .footer {
+    padding: 64px 20px;
+  }
+}
