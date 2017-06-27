@@ -1,0 +1,11 @@
+extends _init/_layout
+
+block head
+  include _init/_settings
+  - var key = "top"
+  - var page = pages[key]
+
+block contents
+  main.main
+    h1 title
+    p testtesttest
