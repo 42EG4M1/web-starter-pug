@@ -13,12 +13,12 @@
     "start": "npm-run-all dev -p watch server",
     "build": "npm-run-all clean mkdir build:sass build:postcss -p build:pug build:webpack copy",
     "build:pug": "pug --out dist/ src/pug/*.pug",
-    "build:sass": "node-sass src/scss/all.scss dist/css/bundle.min.css",
+    "build:sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/scss/all.scss dist/css/bundle.min.css",
     "build:postcss": "postcss dist/css/*.css --no-map --use autoprefixer -b \"last 2 versions\" --use csswring --output dist/css/*.css",
     "build:webpack": "webpack",
     "dev": "npm-run-all mkdir dev:sass dev:postcss -p dev:pug dev:webpack copy",
     "dev:pug": "pug --pretty --out dist/ src/pug/*.pug",
-    "dev:sass": "node-sass src/scss/all.scss dist/css/bundle.min.css --output-style expanded",
+    "dev:sass": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js src/scss/all.scss dist/css/bundle.min.css --output-style expanded",
     "dev:postcss": "postcss dist/css/*.css --use autoprefixer -b \"last 2 versions\" --output dist/css/*.css",
     "dev:webpack": "webpack --config webpack.config.dev.js",
     "watch": "npm-run-all -p watch:*",
@@ -46,6 +46,7 @@
     "eslint-plugin-import": "^2.2.0",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.2",
+    "node-sass-package-importer": "^3.0.4",
     "npm-run-all": "^4.0.2",
     "onchange": "^3.2.1",
     "postcss-cli": "^3.1.1",
@@ -87,5 +88,8 @@
     "parserOptions": {
       "sourceType": "module"
     }
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
   }
 }

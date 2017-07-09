@@ -2,35 +2,31 @@
 // * all
 // ====================
 
-//== config-settings
-@import "config/settings/_setting";
-@import "config/settings/_color";
-@import "config/settings/_fontSet";
-@import "config/settings/_easing";
-@import "config/settings/_mediaQuery";
+//== _variables
+@import "_variables/_setting";
+@import "_variables/_color";
+@import "_variables/_fontSet";
+@import "_variables/_easing";
+@import "_variables/_mediaQuery";
 
-//== config-mixins
-@import "config/mixins/_ellipsis";
-@import "config/mixins/_placeholder";
+//== _mixins
+@import "_mixins/_ellipsis";
+@import "_mixins/_placeholder";
 
-//== config-foundation
-@import "config/foundation/_webfonts";
-@import "config/foundation/_reset";
-@import "config/foundation/_base";
-@import "config/foundation/_noscript";
-@import "config/foundation/_ie";
+//== _init
+@import "_init/_webfonts";
+@import "~normalize.css";
+@import "_init/_base";
+@import "_init/_noscript";
+@import "_init/_ie";
 
-//== module    ---prefix .m-
-@import "module/_svgIcon";
+//== modules .m-
+@import "modules/_svgIcon";
 
-//== layout
-@import "layout/_header";
-@import "layout/_footer";
-@import "layout/_main";
+//== components
+@import "components/_header";
+@import "components/_footer";
+@import "components/_main";
 
-//== component ---prefix .c-
-@import "component/_card";
-
-//== project   ---prefix .p-
-@import "project/_top";
-@import "project/_single";
+//== page .p-
+@import "pages/_top";

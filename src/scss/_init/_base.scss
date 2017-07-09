@@ -1,0 +1,139 @@
+// ====================
+// * _base
+// ====================
+
+html {
+  font-family: $font-family;
+  line-height: $line-height;
+}
+
+body {
+  position: relative;
+  font-size: $font-size;
+  text-align: left;
+  color: $color-text-main;
+  background: $color-bk-base1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+a {
+  -webkit-text-decoration-skip: ink;
+  color: $color-text-link;
+  &:hover {
+    color: $color-text-hover;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q::after,
+q::before,
+blockquote::after,
+blockquote::before {
+  content: '';
+}
+
+svg > defs {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+input,
+select,
+button,
+textarea,
+optgroup {
+  font-family: inherit;
+  color: inherit;
+  vertical-align: middle;
+}
+
+button {
+  box-shadow: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+textarea,
+[type="text"],
+[type="date"],
+[type="tel"],
+[type="email"],
+[type="search"],
+[type="datetime"],
+[type="image"],
+[type="password"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
+[type="radio"],
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+select,
+textarea,
+[type="text"],
+[type="date"],
+[type="tel"],
+[type="email"],
+[type="search"],
+[type="datetime"],
+[type="image"],
+[type="password"],
+[type="submit"] {
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  font-size: 16px;
+}
+
+[disabled] {
+  cursor: default;
+}
